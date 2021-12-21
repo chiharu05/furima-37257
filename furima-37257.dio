@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="aoAj5RgGYdZR_wtZBNFM" name="ページ1">
-        <mxGraphModel dx="733" dy="551" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
+        <mxGraphModel dx="710" dy="680" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -14,10 +14,10 @@
                     <mxGeometry y="26" width="160" height="54" as="geometry"/>
                 </mxCell>
                 <mxCell id="15" value="Items" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;gradientColor=#7ea6e0;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#000000;" parent="1" vertex="1">
-                    <mxGeometry x="360" y="80" width="160" height="160" as="geometry"/>
+                    <mxGeometry x="360" y="80" width="160" height="200" as="geometry"/>
                 </mxCell>
-                <mxCell id="18" value="items_name&#10;items_profile&#10;category&#10;items_situation&#10;delivery_charge&#10;shipment_source&#10;shipping_days&#10;price&#10;user" style="text;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#000000;labelBorderColor=none;strokeColor=#000000;" parent="15" vertex="1">
-                    <mxGeometry y="26" width="160" height="134" as="geometry"/>
+                <mxCell id="18" value="image&#10;items_name&#10;items_profile&#10;category&#10;items_situation&#10;delivery_charge&#10;shipment_source&#10;shipping_date&#10;price&#10;user" style="text;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#000000;labelBorderColor=none;strokeColor=#000000;" parent="15" vertex="1">
+                    <mxGeometry y="26" width="160" height="174" as="geometry"/>
                 </mxCell>
                 <mxCell id="19" value="shipping_addresses" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;gradientColor=#7ea6e0;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#000000;" parent="1" vertex="1">
                     <mxGeometry x="360" y="320" width="160" height="130" as="geometry"/>
@@ -31,7 +31,7 @@
                         <mxPoint x="430" y="260" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="51" value="" style="fontSize=12;html=1;endArrow=ERoneToMany;strokeColor=#000000;exitX=1;exitY=0.097;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.097;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="5" target="18">
+                <mxCell id="51" value="" style="fontSize=12;html=1;endArrow=ERoneToMany;strokeColor=#000000;exitX=1;exitY=0.097;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.069;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="5" target="18">
                     <mxGeometry width="100" height="100" relative="1" as="geometry">
                         <mxPoint x="200" y="119" as="sourcePoint"/>
                         <mxPoint x="390" y="50" as="targetPoint"/>
