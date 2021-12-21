@@ -17,28 +17,22 @@
 
 ## items Tabel
 
-|Column         |Type        |Options                         |
-|---------------|------------|--------------------------------|
-| items_name    | string     | null: false                    |
-| items_profile | text       | null: false                    |
-| price         | string     | null: false                    |
-| user          | references | null: false, foreign_key: true |
+|Column           |Type        |Options                         |
+|-----------------|------------|--------------------------------|
+| items_name      | string     | null: false                    |
+| items_profile   | text       | null: false                    |
+| category        | integer    | null: false                    |
+| items_situation | integer    | null: false                    |
+| delivery_charge | integer    | null: false                    |
+| shipment_source | integer    | null: false                    |
+| shipping_date   | integer    | null: false                    |
+| price           | integer    | null: false                    |
+| user            | references | null: false, foreign_key: true |
 
 ### Association
 
+- belongs_to :user
 - has_one :item_purchase_histories
-- has_one :purchase_histories, through: :item_purchase_histories
-
-## item_purchase_histories Tabel
-
-|Column               |Type        |Options                         |
-|---------------------|------------|--------------------------------|
-| items               | references | null: false, foreign_key: true |
-| purchased_histories | references | null: false, foreign_key: true |
-
-### Association
-- belongs_to :items
-- belongs_to :purchase_histories
 
 ## purchase_histories Tabel
 
@@ -51,7 +45,6 @@
  ### Association
 
 - belongs_to :items
-- belongs_to :items, through: :item_purchase_histories
 - belongs_to :user
 - has_one :shipping_addresses
 
@@ -64,8 +57,8 @@
 | house_number       | string     | null: false                    |
 | building_name      | string     |                                |
 | telephone_number   | integer    | null: false                    |
-| purchase_histories | references | null: false, foreign_key: true |
+| purchase_histories | references | null: false                    |
 
  ### Association
 
-- belongs_to :shipping_addresses
+- belongs_to :purchase_histories
