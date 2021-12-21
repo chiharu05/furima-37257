@@ -60,6 +60,7 @@
 |Column              |Type        |Options                         |
 |--------------------|------------|--------------------------------|
 | post_code          | integer    | null: false                    |
+| prefectures        | integer    | null: false                    |
 | municipalities     | string     | null: false                    |
 | house_number       | string     | null: false                    |
 | building_name      | string     |                                |
