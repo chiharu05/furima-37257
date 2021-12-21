@@ -9,7 +9,7 @@
 | first_name         | string  | null: false               |
 | family_name_kana   | string  | null: false               |
 | first_name_kana    | string  | null: false               |
-| date_of_birth_id   | integer | null: false               |
+| date_of_birth      | date    | null: false               |
 
 ### Association
 
@@ -32,7 +32,7 @@
 
 ### Association
 
-- has_one :item_purchase_histories
+- has_one :item_purchase_history
 - belongs_to :user
 
 ## purchase_histories Tabel
