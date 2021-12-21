@@ -1,24 +1,65 @@
-# README
+## users Tabel
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+|Column              |Type     |Options                    |
+|--------------------|---------|---------------------------|
+| nickname           | string  | null: false               |
+| email              | string  | null: false, unique: true |
+| encrypted_password | string  | null: false               |
+| family_name        | string  | null: false               |
+| first_name         | string  | null: false               |
+| family_name_kana   | string  | null: false               |
+| first_name_kana    | string  | null: false               |
+| date_of_birth      | date    | null: false               |
 
-Things you may want to cover:
+### Association
 
-* Ruby version
+- has_many :items
+- has_many :purchase_histories
 
-* System dependencies
+## items Tabel
 
-* Configuration
+|Column              |Type        |Options                         |
+|--------------------|------------|--------------------------------|
+| items_name         | string     | null: false                    |
+| items_profile      | text       | null: false                    |
+| category_id        | integer    | null: false                    |
+| items_situation_id | integer    | null: false                    |
+| delivery_charge_id | integer    | null: false                    |
+| shipment_source_id | integer    | null: false                    |
+| shipping_date_id   | integer    | null: false                    |
+| price              | integer    | null: false                    |
+| user               | references | null: false, foreign_key: true |
 
-* Database creation
+### Association
 
-* Database initialization
+- has_one :purchase_history
+- belongs_to :user
 
-* How to run the test suite
+## purchase_histories Tabel
 
-* Services (job queues, cache servers, search engines, etc.)
+|Column              |Type        |Options                         |
+|--------------------|------------|--------------------------------|
+| user               | references | null: false, foreign_key: true |
+| item               | references | null: false, foreign_key: true |
 
-* Deployment instructions
+ ### Association
 
-* ...
+- belongs_to :item
+- belongs_to :user
+- has_one :shipping_address
+
+## shipping_addresses Tabel
+
+|Column              |Type        |Options                         |
+|--------------------|------------|--------------------------------|
+| post_code          | string     | null: false                    |
+| shipment_source_id | integer    | null: false                    |
+| municipalities     | string     | null: false                    |
+| house_number       | string     | null: false                    |
+| building_name      | string     |                                |
+| telephone_number   | string     | null: false                    |
+| purchase_history   | references | null: false                    |
+
+ ### Association
+
+- belongs_to :purchase_history
