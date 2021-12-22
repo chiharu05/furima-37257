@@ -5,9 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :items
-  has_many :purchase_histories
+  #has_many :purchase_histories
 
-  validates :encrypted_password, presence: true
   validates :family_name, presence: true
   validates :first_name, presence: true
   validates :family_name_kana, presence: true
