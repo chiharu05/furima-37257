@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="BT7h4oshe6Ed43nigprt" name="ページ1">
-        <mxGraphModel dx="710" dy="680" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
+        <mxGraphModel dx="728" dy="680" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
             <root>
                 <object label="" id="OF0Lugsiy3cNjsQ0Mm0h-0">
                     <mxCell/>
@@ -45,7 +45,7 @@
                         <mxPoint x="240" y="490" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="XjQz6ho0_zj9WpOpdpan-10" value="nickname&#10;email&#10;encrypted_password&#10;family_name&#10;first_name&#10;family_name_kana&#10;first_name_kana&#10;date_of_birth" style="text;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#000000;labelBorderColor=none;strokeColor=#000000;" parent="OF0Lugsiy3cNjsQ0Mm0h-1" vertex="1">
+                <mxCell id="XjQz6ho0_zj9WpOpdpan-10" value="nickname&#10;email&#10;encrypted_password&#10;last_name&#10;first_name&#10;last_name_kana&#10;first_name_kana&#10;date_of_birth" style="text;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#000000;labelBorderColor=none;strokeColor=#000000;" parent="OF0Lugsiy3cNjsQ0Mm0h-1" vertex="1">
                     <mxGeometry x="40" y="106" width="160" height="134" as="geometry"/>
                 </mxCell>
                 <mxCell id="XjQz6ho0_zj9WpOpdpan-11" value="" style="edgeStyle=orthogonalEdgeStyle;fontSize=12;html=1;endArrow=ERmandOne;startArrow=ERmandOne;strokeColor=#000000;exitX=1.019;exitY=0.315;exitDx=0;exitDy=0;exitPerimeter=0;entryX=-0.012;entryY=0.381;entryDx=0;entryDy=0;entryPerimeter=0;" parent="OF0Lugsiy3cNjsQ0Mm0h-1" source="XjQz6ho0_zj9WpOpdpan-2" target="XjQz6ho0_zj9WpOpdpan-4" edge="1">
