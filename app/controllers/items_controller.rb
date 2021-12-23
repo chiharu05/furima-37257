@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  before_action :move_to_index, except: [:index, :show]
+  #現段階で不使用 before_action :move_to_index, except: [:index, :show]
 
   def index
     
@@ -15,10 +15,10 @@ class ItemsController < ApplicationController
 
   private
 
-  def move_to_index
-    unless user_signed_in?
-      redirect_to action: :index
-    end
-  end
+  #現段階で不使用def move_to_index
+    #現段階で不使用 unless user_signed_in?
+      #現段階で不使用 redirect_to action: :index
+    #現段階で不使用 end
+  #現段階で不使用 end
 
 end
