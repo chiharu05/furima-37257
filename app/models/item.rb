@@ -10,7 +10,17 @@ class Item < ApplicationRecord
   belongs_to :shipment_source
   belongs_to :shipping_date
 
-  validates :items_name, :items_profile, :price,  presence: true
-  validates :category_id, :items_situation_id, :delivery_charge_id, :shipment_source_id, :shipping_date_id, numericality: { other_than: 1, message: "can't be blank" } 
+  with_options presence: true do
+    validates :items_name
+    validates :image
+    validates :items_profile
+    validates :price
+  end
+
+  validates :category_id, numericality: { other_than: 1, message: "can't be blank" } 
+  validates :items_situation_id, numericality: { other_than: 1, message: "can't be blank" } 
+  validates :delivery_charge_id, numericality: { other_than: 1, message: "can't be blank" } 
+  validates :shipment_source_id, numericality: { other_than: 1, message: "can't be blank" } 
+  validates :shipping_date_id, numericality: { other_than: 1, message: "can't be blank" } 
 
 end
