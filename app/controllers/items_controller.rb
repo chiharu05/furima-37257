@@ -1,24 +1,28 @@
 class ItemsController < ApplicationController
-  #現段階で不使用 before_action :move_to_index, except: [:index, :show]
+  before_action :authenticate_user!, except: [:index]
 
   def index
-    
   end
 
   def new
-    
+    @item = Item.new
   end
 
   def create
-    
+    @item = Item.new(item_params)
+    if @item.valid?
+      @item.save
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   private
 
-  #現段階で不使用def move_to_index
-    #現段階で不使用 unless user_signed_in?
-      #現段階で不使用 redirect_to action: :index
-    #現段階で不使用 end
-  #現段階で不使用 end
-
+  def item_params
+    params.require(:item).permit(:items_name, :image, :items_profile, :category_id,
+                                 :items_situation_id, :delivery_charge_id, :shipment_source_id, :shipping_date_id,
+                                 :price).merge(user_id: current_user.id)
+  end
 end
