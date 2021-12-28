@@ -30,27 +30,27 @@ RSpec.describe Item, type: :model do
       it "category_idが空では出品できない" do
         @item.category_id = 1
         @item.valid?
-        expect(@item.errors.full_messages).to include("Category must be other than 1")
+        expect(@item.errors.full_messages).to include("Category can't be blank")
       end
       it "items_situation_idが空では出品できない" do
         @item.items_situation_id = 1
         @item.valid?
-        expect(@item.errors.full_messages).to include("Items situation must be other than 1")
+        expect(@item.errors.full_messages).to include("Items situation can't be blank")
       end
       it "delivery_charge_idが空では出品できない" do
         @item.delivery_charge_id = 1
         @item.valid?
-        expect(@item.errors.full_messages).to include("Delivery charge must be other than 1")
+        expect(@item.errors.full_messages).to include("Delivery charge can't be blank")
       end
       it "shipment_source_idが空では出品できない" do
         @item.shipment_source_id = 1
         @item.valid?
-        expect(@item.errors.full_messages).to include("Shipment source must be other than 1")
+        expect(@item.errors.full_messages).to include("Shipment source can't be blank")
       end
       it "shipping_date_idが空では出品できない" do
         @item.shipping_date_id = 1
         @item.valid?
-        expect(@item.errors.full_messages).to include("Shipping date must be other than 1")
+        expect(@item.errors.full_messages).to include("Shipping date can't be blank")
       end
       it "priceが空では出品できない" do
         @item.price = nil
