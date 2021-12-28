@@ -63,9 +63,9 @@ RSpec.describe Item, type: :model do
         expect(@item.errors.full_messages).to include('Price must be greater than or equal to 300')
       end
       it 'priceが¥9,999,999以上では出品できない' do
-        @item.price = '10,000,000'
+        @item.price = '10000000'
         @item.valid?
-        expect(@item.errors.full_messages).to include('Price must be less than or equal to 9,999,999')
+        expect(@item.errors.full_messages).to include('Price must be less than or equal to 9999999')
       end
       it 'priceが全角では出品できない' do
         @item.price = '３００'
