@@ -20,7 +20,6 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @items = Item.includes(:user)
     @item = Item.find(params[:id])
   end
 
