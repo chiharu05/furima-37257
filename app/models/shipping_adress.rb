@@ -1,6 +1,4 @@
 class ShippingAdress < ApplicationRecord
-  belongs_to :purchase_history
-
   include ActiveModel::Model
   attr_accessor :post_code, :shipment_source_id, :municipalities, :house_number, :building_name, :telephone_number, :purchase_history, :user_id, :item_id
 
@@ -16,7 +14,7 @@ class ShippingAdress < ApplicationRecord
 
   def save
     purchase_history = PurchaseHistory.create(user_id: user_id, item_id: item_id)
-    ShippingAdress.create(postal_code: postal_code, shipment_source_id: shipment_source_id, municipalities: municipalities, house_number: house_number, building_name: building_name, telephone_number: telephone_number, purchase_history_id: purchase_history.id)
+    ShippingAdress.create(post_code: post_code, shipment_source_id: shipment_source_id, municipalities: municipalities, house_number: house_number, building_name: building_name, telephone_number: telephone_number, purchase_history_id: purchase_history.id)
   end
 
 end

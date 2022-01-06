@@ -62,11 +62,6 @@ RSpec.describe ShippingAdress, type: :model do
         @shipping_adress.valid?
         expect(@shipping_adress.errors.full_messages).to include("Telephone number is invalid")
       end
-      it 'purchase_historyが存在しなければ出品できない' do
-        @shipping_adress.purchase_history = nil
-        @shipping_adress.valid?
-        expect(@shipping_adress.errors.full_messages).to include('Purchase history must exist')
-      end
     end
   end
 end

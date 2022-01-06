@@ -7,7 +7,6 @@ FactoryBot.define do
     building_name      { '柳ビル103' }
     telephone_number   { '09012345678' }
 
-    association :purchase_history
     user_id               { 1 }
     item_id               { 1 }
   end

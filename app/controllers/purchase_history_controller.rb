@@ -2,9 +2,9 @@ class PurchaseHistoryController < ApplicationController
   before_action :authenticate_user!, except: :index
 
   def index
-    @purchase_history = PurchaseHistory.new
-    @shipping_adress = ShippingAdress.new
     @item = Item.find(params[:item_id])
+    #@purchase_history = PurchaseHistory.new
+    @shipping_adress = ShippingAdress.new
   end
 
   def new
