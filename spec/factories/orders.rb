@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :order do
-    token              {"tok_abcdefghijk00000000000000000"}
+    token              { 'tok_abcdefghijk00000000000000000' }
     user_id            { 1 }
     item_id            { 1 }
     post_code          { '123-4567' }

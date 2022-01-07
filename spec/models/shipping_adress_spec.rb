@@ -20,17 +20,17 @@ RSpec.describe ShippingAdress, type: :model do
       it 'post_codeが空では手続きができない' do
         @shipping_adress.post_code = nil
         @shipping_adress.valid?
-        expect(@shipping_adress.errors.full_messages).to include("Post code can't be blank", "Post code is invalid")
+        expect(@shipping_adress.errors.full_messages).to include("Post code can't be blank", 'Post code is invalid')
       end
       it 'post_codeが全角文字では手続きができない' do
         @shipping_adress.post_code = '１２３－４５６７'
         @shipping_adress.valid?
-        expect(@shipping_adress.errors.full_messages).to include("Post code is invalid")
+        expect(@shipping_adress.errors.full_messages).to include('Post code is invalid')
       end
       it 'post_codeが数字のみでは手続きができない' do
         @shipping_adress.post_code = '1234567'
         @shipping_adress.valid?
-        expect(@shipping_adress.errors.full_messages).to include("Post code is invalid")
+        expect(@shipping_adress.errors.full_messages).to include('Post code is invalid')
       end
       it 'shipment_source_idが空では手続きができない' do
         @shipping_adress.shipment_source_id = 1
@@ -55,12 +55,12 @@ RSpec.describe ShippingAdress, type: :model do
       it 'telephone_numberが10桁以下では手続きができない' do
         @shipping_adress.telephone_number = '123456789'
         @shipping_adress.valid?
-        expect(@shipping_adress.errors.full_messages).to include("Telephone number is invalid")
+        expect(@shipping_adress.errors.full_messages).to include('Telephone number is invalid')
       end
       it 'telephone_numberが11桁以上では手続きができない' do
         @shipping_adress.telephone_number = '12345678901'
         @shipping_adress.valid?
-        expect(@shipping_adress.errors.full_messages).to include("Telephone number is invalid")
+        expect(@shipping_adress.errors.full_messages).to include('Telephone number is invalid')
       end
     end
   end
