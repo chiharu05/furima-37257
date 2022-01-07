@@ -31,7 +31,8 @@
     </div>
     <%# /支払額の表示 %>
 
-    <%= form_with model: @shipping_adress, url: item_purchase_history_index_path, method: :post, id: 'charge-form', class: 'transaction-form-wrap',local: true do |f| %>
+    <%= form_with model: @order, url: item_purchase_history_index_path, method: :post, id: 'charge-form', class: 'transaction-form-wrap',local: true do |f| %>
+    <script type="text/javascript" src="https://js.pay.jp/v1/"></script>
 
     <%= render 'shared/error_messages', model: f.object %>
     <%# カード情報の入力 %>
