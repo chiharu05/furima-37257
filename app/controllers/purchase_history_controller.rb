@@ -4,8 +4,7 @@ class PurchaseHistoryController < ApplicationController
   def index
     @order = Order.new
     @item = Item.find(params[:item_id])
-    redirect_to root_path if current_user == @item.user
-    redirect_to root_path if @item.purchase_history.present?
+    redirect_to root_path if current_user.id == @item.user_id || @item.purchase_history.present?
   end
 
   def new
