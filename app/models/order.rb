@@ -6,6 +6,7 @@ class Order
   with_options presence: true do
     validates :user_id
     validates :item_id
+    validates :purchase_history_id
     validates :post_code, format: { with: /\A[0-9]{3}-[0-9]{4}\z/ }
     validates :municipalities
     validates :house_number

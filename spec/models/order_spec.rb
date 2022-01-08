@@ -70,6 +70,21 @@ RSpec.describe Order, type: :model do
         @order.valid?
         expect(@order.errors.full_messages).to include("Token can't be blank")
       end
+      it 'userが存在しなければ購入できない' do
+        @order.user_id = nil
+        @order.valid?
+        expect(@order.errors.full_messages).to include("User can't be blank")
+      end
+      it 'itemが存在しなければ購入できない' do
+        @order.item_id = nil
+        @order.valid?
+        expect(@order.errors.full_messages).to include("Item can't be blank")
+    end
+      it 'purchase_historyが存在しなければ配送できない' do
+        @order.purchase_history_id = nil
+        @order.valid?
+        expect(@order.errors.full_messages).to include("Purchase history can't be blank")
+      end
     end
   end
 end
