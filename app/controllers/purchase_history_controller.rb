@@ -1,9 +1,9 @@
 class PurchaseHistoryController < ApplicationController
   before_action :authenticate_user!
+  before_action :set_purchase
 
   def index
     @order = Order.new
-    @item = Item.find(params[:item_id])
     redirect_to root_path if current_user.id == @item.user_id || @item.purchase_history.present?
   end
 
@@ -13,7 +13,6 @@ class PurchaseHistoryController < ApplicationController
 
   def create
     @order = Order.new(order_params)
-    @item = Item.find(params[:item_id])
     if @order.valid?
       pay_item
       @order.save
@@ -24,6 +23,10 @@ class PurchaseHistoryController < ApplicationController
   end
 
   private
+
+  def set_purchase
+    @item = Item.find(params[:item_id])
+  end
 
   def order_params
     params.require(:order).permit(:post_code, :shipment_source_id, :municipalities, :house_number, :building_name, :telephone_number, :purchase_history_id)

@@ -6,9 +6,5 @@ FactoryBot.define do
     municipalities      { '横浜市緑区' }
     house_number        { '青山1-1-1' }
     telephone_number    { '09012345678' }
-    user_id             { 1 }
-    item_id             { 1 }
-    purchase_history_id { 1 }
-
   end
 end
