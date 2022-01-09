@@ -25,6 +25,7 @@ class ItemsController < ApplicationController
 
   def edit
     redirect_to root_path unless @item.user_id == current_user.id
+    redirect_to root_path if @item.purchase_history.present?
   end
 
   def update
@@ -43,9 +44,8 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    params.require(:item).permit(:items_name, :image, :items_profile, :category_id,
-                                 :items_situation_id, :delivery_charge_id, :shipment_source_id, :shipping_date_id,
-                                 :price).merge(user_id: current_user.id)
+    params.require(:item).permit(:items_name, :image, :items_profile, :category_id, :items_situation_id, :delivery_charge_id,
+                                 :shipment_source_id, :shipping_date_id, :price).merge(user_id: current_user.id)
   end
 
   def set_item
