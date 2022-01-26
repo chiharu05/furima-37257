@@ -18,7 +18,9 @@ ja:
         shipment_source: 発送元の地域
         shipping_date: 発送までの日数
         price: 価格
-      shipping_adress:
+  activemodel:
+    attributes:
+      order:
         post_code: 郵便番号
         municipalities: 市区町村
         house_number: 番地
