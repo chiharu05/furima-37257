@@ -12,12 +12,13 @@ ja:
         items_name: 商品名
         image: 画像
         items_profile: 商品説明
-        category: カテゴリー
-        items_situation: 商品の状態
-        delivery_charge: 配送料の負担
-        shipment_source: 発送元の地域
-        shipping_date: 発送までの日数
+        category_id: カテゴリー
+        items_situation_id: 商品の状態
+        delivery_charge_id: 配送料の負担
+        shipment_source_id: 発送元の地域
+        shipping_date_id: 発送までの日数
         price: 価格
+        user: ユーザー
   activemodel:
     attributes:
       order:
