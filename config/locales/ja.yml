@@ -23,7 +23,10 @@ ja:
     attributes:
       order:
         post_code: 郵便番号
+        shipment_source_id: 都道府県
         municipalities: 市区町村
         house_number: 番地
         telephone_number: 電話番号
         token: クレジットカード情報
+        user_id: ユーザー
+        item_id: 商品

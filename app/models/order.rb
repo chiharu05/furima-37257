@@ -12,7 +12,7 @@ class Order
     validates :telephone_number, format: { with: /\A0[0-9]{10,11}\z/ }
     validates :token
   end
-  validates :shipment_source_id, numericality: { other_than: 1, message: "can't be blank" }
+  validates :shipment_source_id, numericality: { other_than: 1, message: 'を選択してください' }
 
   def save
     purchase_history = PurchaseHistory.create(user_id: user_id, item_id: item_id)
